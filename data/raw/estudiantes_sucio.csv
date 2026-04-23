@@ -1,0 +1,104 @@
+﻿ID_estudiante;Nombre_completo;Edad;Genero;Correo_electronico;Telefono;Carrera_aplicada;Estrato_socioeconomico;Ciudad_origen;Fecha_nacimiento
+EST0001;Valentina LOPEZ silva;19.0;M;valentina18@hotmail.com;3197694986;ingeniería civil;5;MEDELLIN;1/01/2006
+EST0002;LUIS DELGADO Restrepo;16.0;M;luis92@gmail.com;3174452024;CONTADURÍA;4;ibague;1-25-2009
+EST0003;CATALINA RUIZ silva;18.0;M;catalina98@hotmail.com;3090353911;ingeniería civil;1;Bucaramanga;5-26-2007
+EST0004;sara Guerrero Torres;30.0;F;sara11@gmail.com;3148187279;administración de empresas;5;Bucaramanga;12/03/1995
+EST0005;LUIS RIOS González;29.0;M;luis13@hotmail.com;(310) 203-9357;administración de empresas;3;Cali;22/04/1996
+EST0006;luisa Restrepo MORALES;24.0;M;luisa21@gmail.com;-124086974;Arquitectura;6;Cucuta;6-27-2001
+EST0007;  Andrés  Romero  ;28.0;F;andres52@hotmail.com;3071871145;ingeniería civil;5;Bucaramanga;13/08/1997
+EST0008;sara Flores MENDOZA;18.0;M;;3199981457;CONTADURÍA;6;ibague;7/12/2007
+EST0009;MIGUEL DELGADO alvarez;17.0;FEMENINO;miguel20@hotmail.com;3168428764;MEDICINA;4;ibague;7-20-2008
+EST0010;claudia MENDOZA NUNEZ;29.0;M;claudia88@gmail.com;;ingeniería civil;5;CARTAGENA;14/05/1996
+EST0011;CARLOS mendoza DELGADO;28.0;M;carlos65@hotmail.com;3028564437;administración de empresas;5;ibague;
+EST0012;claudia García Restrepo;21.0;F;claudia@gmail;-5228191;ingeniería civil;3;barranquilla;10/03/2004
+EST0013;ANDREA HERNANDEZ Guerrero;;M;andrea17@hotmail.com;3177100512;ingeniería industrial;2;CARTAGENA;10-14-2005
+EST0014;  RAFAEL  vargas  ;22.0;F;rafael57@gmail.com;3138935707;ingeniería industrial;1;barranquilla;1/06/2003
+EST0015;LUIS CARRILLO Romero;16.0;M;  luis@hotmail.com  ;(319) 000-9606;Ingeniería de Sistemas;1;Bucaramanga;9/04/2009
+EST0016;ANDREA CASTRO Guerrero;18.0;F;;3065229074;ingeniería industrial;DOS;MEDELLIN;7/12/2007
+EST0017;sara rodriguez pérez;150.0;F;sara94@hotmail.com;3091080848;ingeniería civil;2;Cucuta;7/06/2005
+EST0018;natalia HERNANDEZ Molina;28.0;masculino;natalia84@gmail.com;-145112911;Ingeniería de Sistemas;2;  Cali  ;8/07/1997
+EST0019;Andrés MORALES Aguilar;16.0;F;andres34@hotmail.com;3210472348;ingeniería industrial;4;Cucuta;4/10/2009
+EST0020;Andrés CARRILLO Guerrero;16.0;F;andres8@gmail.com;;;5;Cali;28/02/2009
+EST0021;  Gustavo  HERNANDEZ  ;22.0;M;gustavo73@hotmail.com;3066092929;Diseño Gráfico;5;MEDELLIN;19/10/2003
+EST0022;JORGE castro Chavez;19.0;F;jorge51@gmail.com;3035132370;administración de empresas;1;Bogotá;
+EST0023;RAFAEL CASTRO DELGADO;20.0;M;rafael45@hotmail.com;3018466026;Derecho;2;PEREIRA;5-20-2005
+EST0024;claudia García NUNEZ;20.0;M;;-36048439;administración de empresas;1;Cucuta;5-20-2005
+EST0025;LAURA CASTRO MENDOZA;24.0;F;laura33@hotmail.com;(322) 712-4236;Ingeniería de Sistemas;4;CARTAGENA;25/06/2001
+EST0026;Jorge MORALES Molina;;F;jorge72@gmail.com;3002595690;ingeniería civil;6;Cali;6-19-2005
+EST0027;CATALINA RAMIREZ Martínez;20.0;masculino;catalina46@hotmail.com;3056391990;Derecho;3;Cucuta;12/05/2005
+EST0028;  natalia  MORALES  ;30.0;F;natalia4@gmail.com;3048146761;PSICOLOGIA;4;barranquilla;4/12/1995
+EST0029;JUAN Suarez Romero;19.0;F;juan45@hotmail.com;3081924049;Derecho;6;barranquilla;5-28-2006
+EST0030;DANIELA Reyes DELGADO;22.0;F;  daniela@hotmail.com  ;;ingeniería civil;3;Cali;4/01/2003
+EST0031;Gustavo Vega Reyes;27.0;F;gustavo56@hotmail.com;3162727949;CONTADURÍA;5;barranquilla;12-14-1998
+EST0032;RAFAEL vargas MEDINA;22.0;M;;3178304945;PSICOLOGIA;uno;CARTAGENA;11-14-2003
+EST0033;FELIPE nunez RAMIREZ;19.0;F;felipe86@hotmail.com;3101776035;MEDICINA;3;manizales;
+EST0034;CATALINA CARRILLO Restrepo;0.0;F;catalina60@gmail.com;3118591030;ingeniería industrial;5;PEREIRA;2/10/2005
+EST0035;  Elena  RUIZ  ;29.0;M;elena87@hotmail.com;(308) 332-7590;Derecho;2;Bogotá;20/08/1996
+EST0036;luisa MORENO DIAZ;30.0;N/A;luisa@gmail;-132708304;Arquitectura;6;  Bogotá  ;7/08/1995
+EST0037;claudia MORENO rodriguez;24.0;M;claudia16@hotmail.com;3122530539;MEDICINA;6;Cucuta;6-25-2001
+EST0038;Elena DELGADO Vega;29.0;F;elena21@gmail.com;3199623487;ingeniería industrial;3;barranquilla;9-16-1996
+EST0039;DANIELA Molina HERNANDEZ;;F;daniela31@hotmail.com;3072937969;PSICOLOGIA;5;MEDELLIN;4-13-2005
+EST0040;Camila HERNANDEZ DIAZ;22.0;F;;;;2;manizales;23/10/2003
+EST0041;Hernando Aguilar Suarez;16.0;F;hernando39@hotmail.com;3202259439;Arquitectura;4;Cucuta;10/08/2009
+EST0042;  DANIELA  Vega  ;16.0;F;daniela44@gmail.com;-179549338;Arquitectura;6;Cali;18/10/2009
+EST0043;Jennifer CARRILLO Soto;26.0;M;jennifer11@hotmail.com;3172536795;Arquitectura;4;Cali;7/11/1999
+EST0044;SEBASTIÁN ruiz Aguilar;20.0;F;sebastian33@gmail.com;3224119693;ingeniería civil;6;Cucuta;
+EST0045;JUAN LOPEZ Guerrero;19.0;Hombre;  juan@hotmail.com  ;(306) 403-3920;MEDICINA;1;ibague;9/12/2006
+EST0046;Monica MORALES Restrepo;25.0;M;monica21@gmail.com;3083493874;ingeniería civil;3;ibague;12/07/2000
+EST0047;natalia pérez Ortega;29.0;M;natalia73@hotmail.com;3210087076;Ingeniería de Sistemas;4;Bucaramanga;11/11/1996
+EST0048;Mateo alvarez pérez;22.0;F;;-170613520;ingeniería industrial;N/A;Cali;5-20-2003
+EST0049;  RAFAEL  Suarez  ;22.0;F;rafael42@hotmail.com;3228630010;Derecho;1;CARTAGENA;19/08/2003
+EST0050;DAVID RUIZ LOPEZ;23.0;F;david24@gmail.com;;Derecho;3;Bucaramanga;9/12/2002
+EST0051;claudia vargas González;150.0;F;claudia63@hotmail.com;3149028978;Derecho;6;PEREIRA;1/03/2005
+EST0052;Jennifer Guerrero Ortega;;F;jennifer61@gmail.com;3148571764;CONTADURÍA;6;Cucuta;12-15-2005
+EST0053;Jorge Romero Torres;27.0;M;jorge41@hotmail.com;3032092731;CONTADURÍA;6;Cali;12-16-1998
+EST0054;DIANA Rojas Restrepo;20.0;mujer;diana38@gmail.com;-61064490;PSICOLOGIA;1;  Cucuta  ;1/02/2005
+EST0055;MIGUEL alvarez pérez;29.0;M;miguel74@hotmail.com;(307) 632-6757;ingeniería industrial;3;Cali;4/08/1996
+EST0056;  Jennifer  alvarez  ;25.0;M;;3040728909;MEDICINA;5;CARTAGENA;18/02/2000
+EST0057;Gustavo Restrepo ACOSTA;19.0;F;gustavo58@hotmail.com;3118842014;administración de empresas;4;CARTAGENA;1-20-2006
+EST0058;pedro CASTRO CASTRO;20.0;M;pedro21@gmail.com;3064388318;MEDICINA;2;Bogotá;12-20-2005
+EST0059;JUAN Romero RIOS;27.0;F;juan90@hotmail.com;3121878106;ingeniería civil;3;ibague;2-18-1998
+EST0060;ana silva Flores;17.0;M;ana@gmail;;;5;CARTAGENA;23/08/2008
+EST0061;paula Santos silva;24.0;F;paula57@hotmail.com;3021593445;Diseño Gráfico;4;Bucaramanga;1/03/2001
+EST0062;Hernando CARRILLO LOPEZ;28.0;F;hernando74@gmail.com;3010799607;MEDICINA;6;PEREIRA;10-14-1997
+EST0063;  ANDREA  González  ;21.0;f;andrea42@hotmail.com;3179887595;ingeniería civil;3;manizales;13/11/2004
+EST0064;Patricia Martínez MORENO;17.0;F;;3067752800;PSICOLOGIA;N/A;Cucuta;9-15-2008
+EST0065;diego Rojas MEDINA;;F;diego81@hotmail.com;(311) 865-9464;Ingeniería de Sistemas;5;Cali;16/12/2005
+EST0066;GUSTAVO guerrero MORALES;20.0;M;gustavo71@gmail.com;-109519110;ingeniería civil;1;PEREIRA;
+EST0067;Esteban silva DIAZ;29.0;F;esteban61@hotmail.com;3065426016;ingeniería industrial;4;barranquilla;12/05/1996
+EST0068;DANIELA DIAZ RUIZ;0.0;F;daniela1@gmail.com;3075924011;administración de empresas;5;PEREIRA;9-16-2005
+EST0069;Patricia Guerrero Aguilar;23.0;F;patricia25@hotmail.com;3187233309;Derecho;2;manizales;12-16-2002
+EST0070;  DAVID  Aguilar  ;23.0;M;david17@gmail.com;;Diseño Gráfico;3;MEDELLIN;15/09/2002
+EST0071;ana DIAZ Flores;17.0;F;ana34@hotmail.com;3090881839;Diseño Gráfico;6;MEDELLIN;11-28-2008
+EST0072;Sebastián alvarez Guerrero;16.0;mujer;;-169425938;administración de empresas;6;  MEDELLIN  ;11-23-2009
+EST0073;Nicolas MORALES Ortega;30.0;M;nicolas6@hotmail.com;3087073661;Ingeniería de Sistemas;3;manizales;9-14-1995
+EST0074;ISABELLA MORALES Jiménez;17.0;F;isabella80@gmail.com;3183377542;Derecho;5;Cali;11/09/2008
+EST0075;Carlos MORENO RIOS;26.0;M;  carlos@hotmail.com  ;(301) 982-7153;ingeniería industrial;5;CARTAGENA;15/05/1999
+EST0076;paula vargas Aguilar;29.0;F;paula14@gmail.com;3063674421;Arquitectura;3;ibague;5/01/1996
+EST0077;  Jennifer  silva  ;25.0;M;jennifer78@hotmail.com;3200030627;ingeniería industrial;3;barranquilla;8/06/2000
+EST0078;Elena MENDOZA RAMIREZ;;M;elena81@gmail.com;-173500680;Ingeniería de Sistemas;4;Bogotá;12/05/2005
+EST0079;Felipe Chavez DIAZ;18.0;M;felipe17@hotmail.com;3211127925;CONTADURÍA;3;Cucuta;3/09/2007
+EST0080;Ricardo RIOS RUIZ;28.0;M;;;;DOS;manizales;26/02/1997
+EST0081;Jorge Guerrero Torres;23.0;m;jorge75@hotmail.com;3102280752;PSICOLOGIA;2;PEREIRA;9/11/2002
+EST0082;LUIS HERNANDEZ MORENO;30.0;F;luis84@gmail.com;3109601085;ingeniería civil;1;CARTAGENA;2/08/1995
+EST0083;MIGUEL Aguilar MORENO;21.0;F;miguel76@hotmail.com;3199251320;MEDICINA;6;MEDELLIN;7/09/2004
+EST0084;  Monica  CASTRO  ;23.0;M;monica@gmail;-229633105;PSICOLOGIA;1;Bucaramanga;2/06/2002
+EST0085;diego Torres MORENO;150.0;M;diego83@hotmail.com;(317) 166-2572;Diseño Gráfico;1;Bucaramanga;7/10/2005
+EST0086;Patricia CASTRO CARRILLO;19.0;M;patricia43@gmail.com;3207867982;MEDICINA;5;Bogotá;3/05/2006
+EST0087;ISABELLA Torres LOPEZ;18.0;M;isabella46@hotmail.com;3212059893;Derecho;1;Cali;3-24-2007
+EST0088;VALENTINA hernandez Suarez;23.0;F;;3137771264;Diseño Gráfico;5;barranquilla;
+EST0089;sara LOPEZ rodriguez;23.0;F;sara55@hotmail.com;3184172894;ingeniería civil;4;MEDELLIN;10/05/2002
+EST0090;DANIELA ACOSTA CARRILLO;24.0;N/A;  daniela@hotmail.com  ;;CONTADURÍA;5;  ibague  ;4/12/2001
+EST0091;  Patricia  CASTRO  ;;F;patricia30@hotmail.com;3111082235;PSICOLOGIA;4;manizales;11/07/2005
+EST0092;Monica Flores Suarez;17.0;M;monica11@gmail.com;3025026264;Arquitectura;6;Bucaramanga;1-19-2008
+EST0093;Patricia RUIZ Torres;22.0;F;patricia86@hotmail.com;3201402895;Arquitectura;6;Bogotá;5/12/2003
+EST0094;Esteban CASTRO Flores;26.0;F;esteban29@gmail.com;3227438610;ingeniería civil;5;Bucaramanga;5-19-1999
+EST0095;CATALINA NUNEZ ACOSTA;25.0;M;catalina78@hotmail.com;(317) 658-5225;administración de empresas;2;CARTAGENA;1/06/2000
+EST0096;ana Soto Santos;17.0;M;;-198902310;Ingeniería de Sistemas;;barranquilla;8/11/2008
+EST0097;paula Chavez Soto;25.0;M;paula7@hotmail.com;3041763163;MEDICINA;1;MEDELLIN;11-14-2000
+EST0098;  Nicolas  DIAZ  ;19.0;M;nicolas45@gmail.com;3115404062;ingeniería civil;3;ibague;10/11/2006
+EST0099;JENNIFER restrepo rodriguez;16.0;m;jennifer28@hotmail.com;3205983820;MEDICINA;3;Bucaramanga;
+EST0100;MIGUEL Aguilar Guerrero;27.0;M;miguel65@gmail.com;;;6;Bogotá;3/08/1998
+EST0074;ISABELLA MORALES Jiménez;17.0;F;isabella80@gmail.com;3183377542;Derecho;5;Cali;11/09/2008
+EST0055;MIGUEL alvarez pérez;29.0;M;miguel74@hotmail.com;(307) 632-6757;ingeniería industrial;3;Cali;4/08/1996
+EST0052;Jennifer Guerrero Ortega;;F;jennifer61@gmail.com;3148571764;CONTADURÍA;6;Cucuta;12-15-2005
