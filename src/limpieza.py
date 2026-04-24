@@ -2,8 +2,10 @@ import pandas as pd
 from carga import cargaEstudiantes, cargaCursos
 
 def limpiezaEstudiantes (df_estudiantes): 
+    print("Tratamiento de duplicados en el DataFrame de estudiantes:")
+    df_estudiantes = df_estudiantes.drop_duplicates()
     print("Tratamiento de nulos en el DataFrame de estudiantes:")
-    df_estudiantes["Edad"] = df_estudiantes["Edad"].fillna("Desconocida")
+    df_estudiantes["Edad"] = df_estudiantes["Edad"].fillna("18")
     df_estudiantes["Genero"] = df_estudiantes["Genero"].fillna("Prefiere no decir")
     df_estudiantes["Correo_electronico"] = df_estudiantes["Correo_electronico"].fillna("sincorreo@correo.com")
     df_estudiantes["Telefono"] = df_estudiantes["Telefono"].fillna("0000000000")
@@ -14,5 +16,22 @@ def limpiezaEstudiantes (df_estudiantes):
     df_estudiantes['nombre'] = df_estudiantes['nombre'].str.strip().str.title()
     df_estudiantes['Correo_electronico'] = df_estudiantes['Correo_electronico'].str.strip().str.title()
     df_estudiantes["Ciudad_origen"] = df_estudiantes["Ciudad_origen"].str.strip().str.title()
+    #LISTA ESTRICTA DE GENEROS VALIDOS PARA EL CAMPO GENERO
+    Genero = ["Masculino", "Femenino", "Prefiere no decir"]
+    mascara_infractores = ~df_estudiantes["Genero"].isin(Genero)
+    errores_genero = df_estudiantes[mascara_infractores]
+    traduccion_genero = {"M": "Masculino", "F": "Femenino", "FEMENINO": "Femenino", "masculino": "Masculino", 
+                         "N/A": "Prefiere no decir", "Hombre": "Masculino", "mujer": "Femenino"}
+    df_estudiantes["Genero"] = df_estudiantes["Genero"].replace(traduccion_genero)
+    #LISTA ESTRICTA DE GENEROS VALIDOS PARA EL CAMPO CARRERA APLICADA
+    Carrera_aplicada = ["Ingeniería Civil", "Contaduría Pública", "Administración de Empresas", "Arquitectura", "Medicina", 
+                         "ingeniería industrial", "Ingeniería de Sistemas", "Diseño Gráfico", "Derecho", "Psicología"]
+    mascara_infractores_carrera = ~df_estudiantes["Carrera_aplicada"].isin(Carrera_aplicada)
+    errores_carrera = df_estudiantes[mascara_infractores_carrera]
+    traduccion_carrera = {"ingeniería civil": "Ingeniería Civil", "CONTADURÍA": "Contaduría Pública", "administración de empresas": "Administración de Empresas", 
+                         "Arquitectura": "Arquitectura", "MEDICINA": "Medicina", "ingeniería industrial": "Ingeniería Industrial", 
+                         "Ingeniería de Sistemas": "Ingeniería de Sistemas", "Diseño Gráfico": "Diseño Gráfico", 
+                         "Derecho": "Derecho", "PSICOLOGIA": "Psicología"}
+    df_estudiantes["Carrera_aplicada"] = df_estudiantes["Carrera_aplicada"].replace(traduccion_carrera)
 
     return df_estudiantes
