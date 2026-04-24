@@ -2,9 +2,10 @@ import pandas as pd
 from carga import cargaEstudiantes, cargaCursos
 
 def limpiezaEstudiantes (df_estudiantes): 
-    print("Tratamiento de duplicados en el DataFrame de estudiantes:")
+    print("Limpieza de datos en el DataFrame de estudiantes:")
+    #duplicados
     df_estudiantes = df_estudiantes.drop_duplicates(subset="Nombre_completo")
-    print("Tratamiento de nulos en el DataFrame de estudiantes:")
+    #valores nulos
     df_estudiantes["Edad"] = df_estudiantes["Edad"].fillna("18")
     df_estudiantes["Genero"] = df_estudiantes["Genero"].fillna("Prefiere no decir")
     df_estudiantes["Correo_electronico"] = df_estudiantes["Correo_electronico"].fillna("sincorreo@correo.com")
@@ -12,7 +13,7 @@ def limpiezaEstudiantes (df_estudiantes):
     df_estudiantes["Carrera_aplicada"] = df_estudiantes["CarreraAplicada"].fillna("Desconocida")
     df_estudiantes["Estrato_socioeconomico"] = df_estudiantes["Estrato_socioeconomico"].fillna("0")
     df_estudiantes["Fecha_nacimiento"] = df_estudiantes["Fecha_nacimiento"].fillna("1900-01-01")
-    print("Espacios en blanco en el DataFrame de estudiantes:")
+    #estandarizacion de texto, eliminacion de espacios y conversion a formato title case
     df_estudiantes['Nombre_completo'] = df_estudiantes['Nombre_completo'].str.strip().str.title()
     df_estudiantes['Correo_electronico'] = df_estudiantes['Correo_electronico'].str.strip().str.title()
     df_estudiantes["Ciudad_origen"] = df_estudiantes["Ciudad_origen"].str.strip().str.title()
@@ -42,3 +43,56 @@ def limpiezaEstudiantes (df_estudiantes):
     df_estudiantes["Fecha_nacimiento"] = pd.to_datetime(df_estudiantes["Fecha_nacimiento"], errors="coerce", dayfirst=True)
 
     return df_estudiantes
+
+def limpiezaInscripciones (df_inscripciones):
+    print("Tratamiento de duplicados en el DataFrame de inscripciones:")
+    df_inscripciones = df_inscripciones.drop_duplicates(subset=["ID_estudiante", "ID_curso"])
+    #espacios en blanco y estandarizacion de texto
+    df_inscripciones["ID_estudiante"] = df_inscripciones["ID_estudiante"].str.strip()
+    df_inscripciones["ID_curso"] = df_inscripciones["ID_curso"].str.strip() 
+    df_inscripciones["Tipo_documento"] = df_inscripciones["Tipo_documento"].str.strip().str.title()
+    df_inscripciones["Numero_documento"] = df_inscripciones["Numero_documento"].str.strip()
+    df_inscripciones["Programa_inscrito"] = df_inscripciones["Programa_inscrito"].str.strip().str.title()
+    df_inscripciones["Sede"] = df_inscripciones["Sede"].str.strip().str.title()
+    df_inscripciones["Periodo_academico"] = df_inscripciones["Periodo_academico"].str.strip()
+    df_inscripciones["Estado_inscripcion"] = df_inscripciones["Estado_inscripcion"].str.strip().str.title()
+    df_inscripciones["Medio_pago"] = df_inscripciones["Medio_pago"].str.strip().str.title()
+    df_inscripciones["Asesor_asignado"] = df_inscripciones["Asesor_asignado"].str.strip().str.title()
+    #mayusculas y minusculas
+    df_inscripciones["Programa_inscrito"] = df_inscripciones["Programa_inscrito"].str.title()
+    df_inscripciones["Sede"] = df_inscripciones["Sede"].str.title()
+    df_inscripciones["Asesor_asignado"] = df_inscripciones["Asesor_asignado"].str.title()
+    #estandarizacion de texto en el campo Tipo_documento
+    traduccion_tipo_documento = {"cc": "CC", "ti": "TI","T.I": "TI", "ce": "CE", "Pasaporte": "PASAPORTE", 
+                                 "c.c.": "CC","C.C.": "CC",}
+    df_inscripciones["Tipo_documento"] = df_inscripciones["Tipo_documento"].replace(traduccion_tipo_documento)
+    df_inscripciones["Tipo_documento"] = df_inscripciones["Tipo_documento"].str.upper()
+    #estandarización en numero de documento
+    df_inscripciones["Numero_documento"] = df_inscripciones["Numero_documento"].str.replace(r"\D", "", regex=True)
+    #estandarizacion de texto en el campo Programa_inscrito
+    traduccion_programa = {"ingeniería civil": "Ingeniería Civil", "CONTADURÍA": "Contaduría Pública", "administración de empresas": "Administración de Empresas", 
+                         "Arquitectura": "Arquitectura", "MEDICINA": "Medicina", "ingeniería industrial": "Ingeniería Industrial", 
+                         "Ingeniería de Sistemas": "Ingeniería de Sistemas", "Diseño Gráfico": "Diseño Gráfico", 
+                         "Derecho": "Derecho", "PSICOLOGIA": "Psicología", "DECONOCIDA ": "Desconocida "}
+    df_inscripciones["Programa_inscrito"] = df_inscripciones["Programa_inscrito"].replace(traduccion_programa)
+    #estandarizacion de texto en el campo estado de inscripcion
+    traduccion_estado_inscripcion = {   "pendiente": "Pendiente", "PENDIENTE": "Pendiente", "aprobada": "Aprobada", "APROBADA": "Aprobada", "rechazada": "Rechazada", 
+                                     "RECHAZADA": "Rechazada", "En revisión": "En revisión"}
+    df_inscripciones["Estado_inscripcion"] = df_inscripciones["Estado_inscripcion"].replace(traduccion_estado_inscripcion)
+    #estandarizacion de texto en el campo medio de pago
+    traduccion_medio_pago = { "EFECTIVO": "Efectivo", "efectivo": "Efectivo", "Transferencia": "Transferencia", "transferencia": "Transferencia", "TARJETA CREDITO": "Tarjeta Crédito", 
+                             "tarjeta crédito": "Tarjeta Crédito", "Tarjeta Crédito": "Tarjeta Crédito", "BECA": "Beca", "Beca": "Beca"}
+    df_inscripciones["Medio_pago"] = df_inscripciones["Medio_pago"].replace(traduccion_medio_pago)
+    #valor matricula, conversion a numerico y manejo de errores
+    df_inscripciones["Valor_matricula"] = (df_inscripciones["Valor_matricula"].replace(r"[\$,]", "", regex=True)).astype(str)
+    #creditos del programa, conversion a numerico y manejo de errores
+    df_inscripciones["Creditos_programa"] = pd.to_numeric(df_inscripciones["Creditos_programa"], errors="coerce")
+    #semestre de inscripcion, conversion a numerico y manejo de errores
+    traduccion_semestre = {"primero": "1", "SEGUNDO": "2", "II": "2",}
+    df_inscripciones["Semestre_inscripcion"] = df_inscripciones["Semestre_inscripcion"].replace(traduccion_semestre)
+    df_inscripciones["Semestre_inscripcion"] = pd.to_numeric(df_inscripciones["Semestre_inscripcion"], errors="coerce")
+    #fecha de inscripcion, conversion a formato de fecha y manejo de errores
+    df_inscripciones["Fecha_inscripcion"] = pd.to_datetime(df_inscripciones["Fecha_inscripcion"], errors="coerce", dayfirst=True)
+
+
+    return df_inscripciones
