@@ -25,13 +25,14 @@ def limpiezaEstudiantes (df_estudiantes):
     df_estudiantes["Genero"] = df_estudiantes["Genero"].replace(traduccion_genero)
     #LISTA ESTRICTA DE GENEROS VALIDOS PARA EL CAMPO CARRERA APLICADA
     Carrera_aplicada = ["Ingeniería Civil", "Contaduría Pública", "Administración de Empresas", "Arquitectura", "Medicina", 
-                         "ingeniería industrial", "Ingeniería de Sistemas", "Diseño Gráfico", "Derecho", "Psicología"]
+                         "ingeniería industrial", "Ingeniería de Sistemas", "Diseño Gráfico", "Derecho", "Psicología", "Desconocida "]
     mascara_infractores_carrera = ~df_estudiantes["Carrera_aplicada"].isin(Carrera_aplicada)
     errores_carrera = df_estudiantes[mascara_infractores_carrera]
     traduccion_carrera = {"ingeniería civil": "Ingeniería Civil", "CONTADURÍA": "Contaduría Pública", "administración de empresas": "Administración de Empresas", 
                          "Arquitectura": "Arquitectura", "MEDICINA": "Medicina", "ingeniería industrial": "Ingeniería Industrial", 
                          "Ingeniería de Sistemas": "Ingeniería de Sistemas", "Diseño Gráfico": "Diseño Gráfico", 
-                         "Derecho": "Derecho", "PSICOLOGIA": "Psicología"}
+                         "Derecho": "Derecho", "PSICOLOGIA": "Psicología", "DECONOCIDA ": "Desconocida "}
     df_estudiantes["Carrera_aplicada"] = df_estudiantes["Carrera_aplicada"].replace(traduccion_carrera)
+
 
     return df_estudiantes
