@@ -1,5 +1,5 @@
 import pandas as pd
-from carga import cargaEstudiantes, cargaCursos
+import numpy as np
 
 def limpiezaEstudiantes (df_estudiantes): 
     print("Limpieza de datos en el DataFrame de estudiantes:")
@@ -13,8 +13,8 @@ def limpiezaEstudiantes (df_estudiantes):
     df_estudiantes["Correo_electronico"] = df_estudiantes["Correo_electronico"].fillna("sincorreo@correo.com")
     df_estudiantes["Telefono"] = df_estudiantes["Telefono"].replace("", np.nan)
     df_estudiantes["Telefono"] = df_estudiantes["Telefono"].fillna("0000000000")
-    df_estudiantes["Carreer_aplicada"] = df_estudiantes["CarreraAplicada"].replace("", np.nan)
-    df_estudiantes["Carrera_aplicada"] = df_estudiantes["CarreraAplicada"].fillna("Desconocida")
+    df_estudiantes["Carrera_aplicada"] = df_estudiantes["Carrera_aplicada"].replace("", np.nan)
+    df_estudiantes["Carrera_aplicada"] = df_estudiantes["Carrera_aplicada"].fillna("Desconocida")
     df_estudiantes["Estrato_socioeconomico"] = df_estudiantes["Estrato_socioeconomico"].fillna("0")
     df_estudiantes["Fecha_nacimiento"] = df_estudiantes["Fecha_nacimiento"].fillna("1900-01-01")
     #estandarizacion de texto, eliminacion de espacios y conversion a formato title case
@@ -61,10 +61,10 @@ def limpiezaEstudiantes (df_estudiantes):
 
 def limpiezaInscripciones (df_inscripciones):
     print("Tratamiento de duplicados en el DataFrame de inscripciones:")
-    df_inscripciones = df_inscripciones.drop_duplicates(subset=["ID_estudiante", "ID_curso"])
+    df_inscripciones = df_inscripciones.drop_duplicates(subset=["ID_inscripcion"])
     #espacios en blanco y estandarizacion de texto
     df_inscripciones["ID_estudiante"] = df_inscripciones["ID_estudiante"].str.strip()
-    df_inscripciones["ID_curso"] = df_inscripciones["ID_curso"].str.strip() 
+    df_inscripciones["ID_inscripcion"] = df_inscripciones["ID_inscripcion"].astype(str).str.strip()
     df_inscripciones["Tipo_documento"] = df_inscripciones["Tipo_documento"].str.strip().str.title()
     df_inscripciones["Numero_documento"] = df_inscripciones["Numero_documento"].str.strip()
     df_inscripciones["Programa_inscrito"] = df_inscripciones["Programa_inscrito"].str.strip().str.title()
@@ -99,13 +99,13 @@ def limpiezaInscripciones (df_inscripciones):
                              "tarjeta crédito": "Tarjeta Crédito", "Tarjeta Crédito": "Tarjeta Crédito", "BECA": "Beca", "Beca": "Beca"}
     df_inscripciones["Medio_pago"] = df_inscripciones["Medio_pago"].replace(traduccion_medio_pago)
     #valor matricula, conversion a numerico y manejo de errores
-    df_inscripciones["Valor_matricula"] = (df_inscripciones["Valor_matricula"].replace(r"[\$,]", "", regex=True)).astype(str)
+    df_inscripciones["Valor_matricula"] = pd.to_numeric(df_inscripciones["Valor_matricula"].replace(r"[\$,]", "", regex=True), errors="coerce")
     #creditos del programa, conversion a numerico y manejo de errores
     df_inscripciones["Creditos_programa"] = pd.to_numeric(df_inscripciones["Creditos_programa"], errors="coerce")
-    #semestre de inscripcion, conversion a numerico y manejo de errores
+    #semestre a cursar, conversion a numerico y manejo de errores
     traduccion_semestre = {"primero": "1", "SEGUNDO": "2", "II": "2",}
-    df_inscripciones["Semestre_inscripcion"] = df_inscripciones["Semestre_inscripcion"].replace(traduccion_semestre)
-    df_inscripciones["Semestre_inscripcion"] = pd.to_numeric(df_inscripciones["Semestre_inscripcion"], errors="coerce")
+    df_inscripciones["Semestre_a_cursar"] = df_inscripciones["Semestre_a_cursar"].replace(traduccion_semestre)
+    df_inscripciones["Semestre_a_cursar"] = pd.to_numeric(df_inscripciones["Semestre_a_cursar"], errors="coerce")
     #fecha de inscripcion, conversion a formato de fecha y manejo de errores
     df_inscripciones["Fecha_inscripcion"] = pd.to_datetime(df_inscripciones["Fecha_inscripcion"], errors="coerce", dayfirst=True)
     #nulos
@@ -113,5 +113,5 @@ def limpiezaInscripciones (df_inscripciones):
     df_inscripciones["Asesor_asignado"] = df_inscripciones["Asesor_asignado"].fillna("Sin Asesor")
     df_inscripciones["Valor_matricula"] = df_inscripciones["Valor_matricula"].fillna(df_inscripciones["Valor_matricula"].median())
     df_inscripciones["Creditos_programa"] = df_inscripciones["Creditos_programa"].fillna(df_inscripciones["Creditos_programa"].median())
-    df_inscripciones["Semestre_inscripcion"] = df_inscripciones["Semestre_inscripcion"].fillna(df_inscripciones["Semestre_inscripcion"].median())
+    df_inscripciones["Semestre_a_cursar"] = df_inscripciones["Semestre_a_cursar"].fillna(df_inscripciones["Semestre_a_cursar"].median())
     return df_inscripciones
