@@ -1,9 +1,9 @@
 import pandas as pd
 
 def cargaEstudiantes ():
-    df_estudiantes = pd.read_csv('../data/estudiantes.csv', sep=';')
+    df_estudiantes = pd.read_csv('../data/raw/estudiantes_sucio.csv', sep=';')
     return df_estudiantes
 
-def cargaCursos ():
-    df_cursos = pd.read_csv('../data/cursos.csv', sep=';')
-    return df_cursos
+def cargaInscripciones ():
+    df_inscripciones = pd.read_csv('../data/raw/inscripciones_sucio.csv', sep=';')
+    return df_inscripciones

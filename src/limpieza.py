@@ -1,5 +1,4 @@
 import pandas as pd
-from carga import cargaEstudiantes, cargaCursos
 
 def limpiezaEstudiantes (df_estudiantes): 
     print("Limpieza de datos en el DataFrame de estudiantes:")
